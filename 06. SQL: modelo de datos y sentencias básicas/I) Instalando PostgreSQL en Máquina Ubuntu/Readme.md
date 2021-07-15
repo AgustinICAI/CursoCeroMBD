@@ -77,7 +77,9 @@ Una vez instalado el motor y comprobado que corre correctamente, vamos a procede
 ![alt text](https://www.postgresqltutorial.com/wp-content/uploads/2018/03/dvd-rental-sample-database-diagram.png)
 
 
-- Para importar esta base de datos en nuestro motor postgre, lo haremos a través del IDE. Para ello seguiremos los pasos del siguiente enlace, a partir del apartado "Load the DVD Rental database using the pgAdmin"
+- Para importar esta base de datos en nuestro motor postgre, lo haremos a través del IDE. Para ello seguiremos los pasos del siguiente enlace, a partir del apartado "Load the DVD Rental database using the pgAdmin": https://www.postgresqltutorial.com/load-postgresql-sample-database/
+
+
 
 - Una vez importada correctamente, navengando en la derecha sobre: dvdrental -> schemas -> Tables, deberíamos ser capaces de ver todas las tablas cargadas. Algo así:
 
