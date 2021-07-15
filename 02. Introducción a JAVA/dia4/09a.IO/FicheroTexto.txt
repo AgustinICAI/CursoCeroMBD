@@ -1,0 +1,3 @@
+{"Nombre":"Juan","Edad":30,"NIF":"50943"}
+{"Nombre":"Carlos","Edad":3,"NIF":"50uu943"}
+{"Nombre":"PEpe","Edad":39,"NIF":"5jhj0943"}

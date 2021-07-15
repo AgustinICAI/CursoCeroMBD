@@ -1,0 +1,36 @@
+###CSV
+CAMPO1,CAMPO2
+hola,campo2
+que,campo2
+tal,campo2
+kjfa,campo2
+sd,campo2
+afd,campo2
+af,campo2
+sdaf,campo2
+sd,campo2
+
+####XML####
+<inicio>
+    <campo> 431234514 </campo>
+    <campo atributo1="123"> 54245234 </campo>
+    <campo atributo2="1234" />
+</inicio>
+
+###JSON### <-- GSON
+{
+    "campo1":431234514,
+    "campo2":{
+              "atributo1":"123",
+              "campo":54245234
+             },
+    "campo3":{"atributo2":"1234"}
+}
+
+###YAML###
+campo1:431234514
+campo2:
+  atributo1:"123"
+  campo:54245234
+campo3:
+  atributo2:"1234"
