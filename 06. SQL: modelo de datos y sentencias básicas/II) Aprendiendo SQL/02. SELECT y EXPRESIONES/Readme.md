@@ -111,7 +111,7 @@ SELECT
 FROM customer;
 ```
 
-### Ejemplo del uso de expresiones en la SELECT
+## Ejemplo del uso de expresiones en la SELECT
 La siguiente consulta devuelve los nombres completos de todos los clientes. Construye el nombre completo concatenando el nombre, el espacio y el apellido:
 ```sql
 SELECT
@@ -121,3 +121,30 @@ FROM
 ```
 
 Se usa el || como el operador de concatenación que concatena una o más cadenas en una sola cadena.
+
+## Ejemplo de ORDER BY
+La sentencia ORDER BY permite ordenador los elementos que se devuelven por el campo, por ejemplo, si del ejemplo anterior, quisieramos ordenar la salida, esta sería la query:
+```sql
+SELECT
+   first_name || ' ' || last_name as nombre_completo
+FROM
+    customer
+ORDER BY 1;
+
+/*También se podría haber escrito así*/
+SELECT
+   first_name || ' ' || last_name as nombre_completo
+FROM
+    customer
+ORDER BY nombre_completo;
+```
+
+
+
+## Funciones de agregación
+Estas funciones me permiten realizar cálculos u operaciones sobre los registros de una tabla y sobre una o varias columnas. Las funciones de agregación SQL más usadas son las siguientes:
+- MIN(del campo que se desee)
+- MAX(campo)
+- AVG(campo)
+- SUM(campo)
+- count(*)
