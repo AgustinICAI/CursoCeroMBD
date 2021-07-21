@@ -1,5 +1,8 @@
+Venid el primer día con la máquina virtual instalada, o por lo menos habiéndolo intentado!
+
+
 # Maquina virtual
-Máquina virtual o virtual machine (VM) es una emulación de un sistema de computación.
+Máquina virtual o virtual machine (VM) es una emulación de un sistema de computación. 
 
 ## Máquinas virtuales de sistema
 Las máquinas virtuales de sistema, también llamadas máquinas virtuales de hardware, permiten a la máquina física subyacente multiplicarse entre varias máquinas virtuales, cada una ejecutando su propio sistema operativo.
