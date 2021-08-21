@@ -1,4 +1,4 @@
-# dia1 - J 10
+# dia1
 ## Tema 0. Presentación de la asignatura. 
 ## Tema 1.
  - JDK y Qué es Java.
@@ -18,14 +18,12 @@
  - Constructores y constructores personalizados.
  - Reutilización de constructores y setters> this
  - DRY and KISS
- - Métodos sobrecargadas. 
+ - Métodos sobrecargados. 
  - Atributos y métodos de clase.
  - Ejemplo de clase con Atributos de clase.
  - Corrección de errores: estilos de programación. / Guías esenciales: variables, mayúsculas, etc. 
- - Atributos y métodos de clase.
- - Ejemplo de clase con Atributos de clase.
- - Corrección de errores: estilos de programación. / Guías esenciales: variables, mayúsculas, etc. "
-# dia2 - V 11	
+
+# dia2
 ## Tema 3. Arrays
  - Programación con Arrays
  - Modularación de un programa App.
@@ -40,7 +38,7 @@
  - Referencias a objetos
 - clases abstractas e Interfaces
  - Métodos abstractos"
-# dia3 - L 14	
+# dia3	
 ## Tema 5. Object
  - toString()
  - equals() 
@@ -55,7 +53,7 @@
  - Modificadores."
 ## Tema 8. Tipos de datos
 - Wrappers
-# dia4 - M 15
+# dia4
 ## Tema 9. Colecciones
  - ArrayList
  - Collections: List, Sets, Mapas e Iterator"
