@@ -13,6 +13,10 @@
 - Fue el trabajo de Linus Torvald con 21 años —produciendo un kernel viable y funcional al que llamó Linux— lo que dio vida al sistema operativo completo. Dado que Linus estaba usando varias herramientas GNU (por ejemplo, GNU Compiler Collection, o GCC), la unión de las herramientas GNU y el kernel de Linux fue una combinación perfecta.
 
 ![Stallman y Linus](https://raw.githubusercontent.com/AgustinICAI/CursoCeroMBD/master/images/StallmanLinus.png)
+
 Extraído de [Opensource Redhat Project](https://opensource.com/article/18/5/differences-between-linux-and-unix).
 
 - Las distribuciones actuales surgen estos proyectos: Ubuntu, Debian, Rhell, Suse y hasta más de 300 conocidas.
+
+
+![30 aniversario LINUX!](https://raw.githubusercontent.com/AgustinICAI/CursoCeroMBD/master/images/aniversario UNIX.png)
