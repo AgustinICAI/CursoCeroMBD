@@ -19,4 +19,4 @@ Extraído de [Opensource Redhat Project](https://opensource.com/article/18/5/dif
 - Las distribuciones actuales surgen estos proyectos: Ubuntu, Debian, Rhell, Suse y hasta más de 300 conocidas.
 
 
-![30 aniversario LINUX!](https://raw.githubusercontent.com/AgustinICAI/CursoCeroMBD/master/images/aniversario UNIX.png)
+![30 aniversario LINUX](https://raw.githubusercontent.com/AgustinICAI/CursoCeroMBD/master/images/aniversario UNIX.png)
