@@ -1,5 +1,4 @@
 # dia1
-## Tema 0. Presentación de la asignatura. 
 ## Tema 1.
  - JDK y Qué es Java.
  - Introducción a lenguajes de programación.
