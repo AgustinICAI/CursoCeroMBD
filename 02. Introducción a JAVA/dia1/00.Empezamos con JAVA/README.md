@@ -41,7 +41,8 @@ Actualizar el PATH de tu máquina para incluir ./bin
 * Lo voy al nuevo java /usr/lib/jvm/java-16-openjdk-amd64/bin/java
 
 3)
+```
 sudo ln -s /usr/lib/jvm/java-16-openjdk-amd64/bin/java java
 sudo ln -s /usr/lib/jvm/java-16-openjdk-amd64/bin/javac javac
-
+```
 Hay que hacerlo tanto para java, como para javac
