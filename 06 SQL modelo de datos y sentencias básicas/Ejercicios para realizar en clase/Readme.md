@@ -25,3 +25,9 @@ Para abrir nuestra base de datos importada, tendremos que realizar los siguiente
 
 ## Ejercicios
 
+- Hacer una select sobre las tablas de la base de datos para poder observar los campos y contenidos que tienen las tablas
+- Sacar toda la información sobre Kobe Bryant
+- Sacando el id_player, sacar todas las estadisticas de los partidos de Kobe Bryant
+- Obtener el jugador con mayor número de puntos en un partido
+- Obtener el jugador con más triples dobles
+- Obtener el jugador que más puntos metió en su año de DRAFT
