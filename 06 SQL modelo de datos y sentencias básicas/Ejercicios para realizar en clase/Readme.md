@@ -29,5 +29,7 @@ Para abrir nuestra base de datos importada, tendremos que realizar los siguiente
 - Sacar toda la información sobre Kobe Bryant
 - Sacando el id_player, sacar todas las estadisticas de los partidos de Kobe Bryant
 - Obtener el jugador con mayor número de puntos en un partido
-- Obtener el jugador con más triples dobles
+- Obtener el jugador con más triples dobles y que equipos distintos le han sufrido.
+- Sacar los paises que no sean EEUU que más han contribuido con jugadores ordenado de forma descendente.
 - Obtener el jugador que más puntos metió en su año de DRAFT
+- Obtener el nombre y temporada de los jugadores que en una temporada han metido más del 30% del todos los puntos de su equipo.
