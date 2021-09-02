@@ -84,3 +84,15 @@ where t1.team_id = g.team_id_home_id and t2.team_id = g.team_id_away_id
 					         group by pgl2.player_id) playerTD3 ))) tablaEquipos 
 group by tablaEquipos.equiposufridor
 ```
+
+```sql
+select p.player_name, pgl.team_id, pgl.season_id, sum(pts)
+from player p, player_game_log pgl 
+where pgl.player_id  = p.player_id 
+group by p.player_name, pgl.team_id, pgl.season_id
+having sum(pts) > 0.3 * (select sum(pts)
+						 from player_game_log pgl2
+						 where pgl2.season_id = pgl.season_id and pgl2.team_id = pgl.team_id 
+						 group by pgl2.season_id, pgl2.team_id)
+
+```
