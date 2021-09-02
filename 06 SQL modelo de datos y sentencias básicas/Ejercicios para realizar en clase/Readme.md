@@ -85,6 +85,8 @@ where t1.team_id = g.team_id_home_id and t2.team_id = g.team_id_away_id
 group by tablaEquipos.equiposufridor
 ```
 
+- Obtener el nombre y temporada de los jugadores que en una temporada han metido más del 30% del todos los puntos de su equipo.
+
 ```sql
 select p.player_name, pgl.team_id, pgl.season_id, sum(pts)
 from player p, player_game_log pgl 
