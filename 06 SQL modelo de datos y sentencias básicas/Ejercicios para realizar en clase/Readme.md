@@ -37,3 +37,50 @@ Para abrir nuestra base de datos importada, tendremos que realizar los siguiente
 - Obtener el jugador con más triples dobles y que equipos distintos le han sufrido (campo td3).
 - Obtener el nombre y temporada de los jugadores que en una temporada han metido más del 30% del todos los puntos de su equipo.
 - Obtener un listado de los jugadores que más puntos metieron en su año de DRAFT y el número de partidos que jugaron.
+
+
+
+# Soluciones
+- Obtener el jugador con más partidos, sacando nombre jugador y puntos.
+```sql
+select p.player_name, count(*) from player_game_log pgl, player p 
+where p.player_id = pgl .player_id 
+group by p.player_name 
+having count(*) = (select max(partidos) from 
+                                     (select pgl2.player_id, count(*) partidos 
+                                      from player_game_log pgl2
+                                      group by pgl2.player_id) countpartidos)
+
+```
+
+- Obtener el jugador con más triples dobles y que equipos distintos le han sufrido (campo td3).
+```sql
+select *
+from player_game_log pgl3
+where td3 = 1 and pgl3.player_id = (
+								select pgl.player_id 
+								from player_game_log pgl
+								group by pgl.player_id 
+								having sum(td3) = (select max(sumatd3) from (select pgl2.player_id, sum(td3) sumatd3 from player_game_log pgl2
+                                group by pgl2.player_id 
+																			order by 2 desc) maxtd3))
+			
+```
+```sql
+select equiposufridor, count(*)
+from (select CASE WHEN t1.team_id = pgl.team_id THEN t2.nickname
+            ELSE t1.nickname
+       end as equiposufridor
+from player_game_log pgl, player p, game g, team t1, team t2
+where t1.team_id = g.team_id_home_id and t2.team_id = g.team_id_away_id 
+      and g.game_id = pgl.game_id and p.player_id = pgl.player_id 
+      and td3=1 and pgl.player_id  = (
+	select pgl1.player_id
+	from player_game_log pgl1 
+	group by pgl1.player_id
+	having sum(td3) = (select max(playerTD3.td3)
+					   from (select pgl2.player_id,sum(td3) as td3
+					         from player_game_log pgl2
+					         group by pgl2.player_id) playerTD3 ))) tablaEquipos 
+group by tablaEquipos.equiposufridor
+```
