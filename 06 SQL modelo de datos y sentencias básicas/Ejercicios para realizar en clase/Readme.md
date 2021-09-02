@@ -98,3 +98,16 @@ having sum(pts) > 0.3 * (select sum(pts)
 						 group by pgl2.season_id, pgl2.team_id)
 
 ```
+
+```sql
+select *
+from 
+(select p.player_name player_name, pgl.team_id team_id, pgl.season_id season_id, sum(pts) pts_jugador
+from player p, player_game_log pgl 
+where pgl.player_id  = p.player_id 
+group by p.player_name, pgl.team_id, pgl.season_id) as puntos_jugador,						 
+(select pgl.season_id season_id , pgl.team_id team_id , sum(pts) pts_equipo
+from player_game_log pgl
+group by pgl.season_id, pgl.team_id) as puntos_equipo
+where puntos_jugador.team_id = puntos_equipo.team_id and puntos_jugador.season_id = puntos_equipo.season_id and pts_jugador > 0.3*pts_equipo
+```
