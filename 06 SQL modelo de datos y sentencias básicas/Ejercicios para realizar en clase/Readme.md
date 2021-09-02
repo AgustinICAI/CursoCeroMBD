@@ -5,6 +5,7 @@ Es necesario haber revisado el apartado I de instalación de Postgre. Una vez re
 ```
 xz -d nba.sql.xz # Descomprime el dump de base de datos de la nba
 psql # conectar a la base de datos
+sudo su postgres # Comando para ponernos con el usuario postgres en la máquina
 > CREATE DATABASE nba;
 psql -U <USERNAME> <DBNAME> < nba.sql # Carga la base de datos. En <USERNAME>, usaremos el usuario de postgresql por defecto que es "postgres" y en <DBNAME> nba 
 ```
