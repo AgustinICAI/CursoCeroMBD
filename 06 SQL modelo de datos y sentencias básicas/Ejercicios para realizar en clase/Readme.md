@@ -111,3 +111,24 @@ from player_game_log pgl
 group by pgl.season_id, pgl.team_id) as puntos_equipo
 where puntos_jugador.team_id = puntos_equipo.team_id and puntos_jugador.season_id = puntos_equipo.season_id and pts_jugador > 0.3*pts_equipo
 ```
+
+```sql
+select p.player_name, sum(pts), count(*)
+from player_game_log pgl
+join player p on (pgl.player_id = p.player_id)
+where p.draft_year = pgl.season_id::text 
+group by p.player_name 
+order by 2 desc
+
+select p.player_name, sum(pts), count(*) 
+from player_game_log pgl2
+join player p on (pgl2.player_id = p.player_id)
+join 
+(select player_id as player_id, min(season_id) as primer_ano
+from player_game_log pgl 
+group by player_id) primera_temporada on pgl2.player_id = primera_temporada.player_id
+where primera_temporada.primer_ano = pgl2.season_id 
+group by player_name 
+order by 2 desc
+
+```
