@@ -13,9 +13,7 @@ public class Tienda
     }
     public Tienda(String nombre, String franquicia, String direccion, int aforo)
     {
-        this.nombre = nombre;
-        this.direccion = direccion;
-        this.aforo = aforo;
+        this(nombre,direccion,aforo);
         this.franquicia = franquicia;
     }
     public String getNombre()
