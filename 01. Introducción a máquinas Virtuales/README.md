@@ -40,7 +40,7 @@ Motores principales para correr contenedores
 https://www.virtualbox.org/wiki/Downloads
 
 ### 2. Descargar imagen Ubuntu
-https://releases.ubuntu.com/20.04/
+https://ubuntu.com/download/desktop/thank-you?version=22.04&architecture=amd64
 - Se descargará una ISO que es la que hay que cargar en virtualbox
 
 - Here's what Canonical lists as the recommended minimum system requirements for installing the desktop edition of Ubuntu 20.04 Focal Fossa (source). Keep in mind that this pertains to physical installs. Virtualized installs can actually get by with less.
@@ -51,19 +51,19 @@ https://releases.ubuntu.com/20.04/
 
 * Puede darse el problema de que a nivel de bios no esté habilitada la opción de hypervisor. Si da un error al instalar será necesario activarlo en bios.
 
-
-
 - Instalar en virtual Box
 - Activar la funcionalidad de copypaste y drag&drop. No todos los sistemas son compatibles con esta funcionalidad. También es recomendable configurar una shared folder.
+
+
+### Instalar usando snap: Pycharm, IntelliJ (según recomiende el fabricante).
+### Instalar visual studio code y Chrome usando el comando dpkg (descargar los ficheros .deb y lanzar el comando sudo dpkg -i ... )
+### Instalar GIT usando apt-get (siempre antes de instalar hay que hacer $ sudo apt-get update y posteriormente $ sudo apt-get install ... )
+
+
 
 
 ## OPCION 2
 
 ### 1. Crear una partición en el disco (para no borrar el que ya tenemos, en windows se puede usar el gestor de particiones)
 ### 2. Instalar ubuntu en ella. Para ello será necesario crear un usb bootable con el ubuntu dentro.
-## Instalar Pycharm, IntelliJ (según recomiende el fabricante) y Chromium con SNAP.
 
-# Tipos de procesos
-- Interactivos: tienen interacción (entrada/salida) con el usuario
-- Background: corren en segundo plano
-- Daemon: son procesos de background arrancados por el sistema operativo.

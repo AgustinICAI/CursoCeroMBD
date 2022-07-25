@@ -20,3 +20,10 @@ Extraído de [Opensource Redhat Project](https://opensource.com/article/18/5/dif
 
 
 ![30 aniversario LINUX](https://raw.githubusercontent.com/AgustinICAI/CursoCeroMBD/master/images/aniversario%20UNIX.png)
+
+
+
+## ¿Qué es el Open Source?
+
+- Free vs Open
+- Modelos opensource: public, MIT, Apache y GNU GPL
