@@ -1,27 +1,16 @@
 Es necesario haber revisado el apartado I de instalación de Postgre. Una vez realizado esto es necesario antes de empezar las clases de postgre, los siguientes pasos:
 - Echar un vistazo a este repo de Git: https://github.com/mpope9/nba-sql
-- De aquí, extraeremos el último dump de las estadísticas de la NBA: https://github.com/mpope9/nba-sql/releases
-- Una vez descargada y descomprimida, será necesario instalarla en nuestro postgre. Para ello será necesario ejecutar los siguientes comandos:
-```
-xz -d nba.sql.xz # Descomprime el dump de base de datos de la nba
-sudo su postgres # Comando para ponernos con el usuario postgres en la máquina
-psql # conectar a la base de datos
-> CREATE DATABASE nba;
-psql -U <USERNAME> <DBNAME> < nba.sql # Carga la base de datos. En <USERNAME>, usaremos el usuario de postgresql por defecto que es "postgres" y en <DBNAME> nba 
-```
+- De aquí, se ha realizado un dump de 1997 al 2022. El resultado está en: https://raw.githubusercontent.com/AgustinICAI/CursoCeroMBD/master/06%20SQL%20modelo%20de%20datos%20y%20sentencias%20b%C3%A1sicas/Ejercicios%20para%20realizar%20en%20clase/nba_dump.zip
+- Una vez descargada y descomprimida, será necesario cargar este dump en nuestro postgre. Para ello seguid los mismos pasos que hicimos para cargar la base de datos del videoclub.
+
 - Echar un vistazo en pgAdmin que todo se encuentre correctamente cargado
-- Para trabajar y realizar los ejercicios utilizaremos otro IDE de gestion de base de datos. El elegido es dbeaver. Usaremos snap para instalarlo: 
+- Para trabajar y realizar los ejercic/ios utilizaremos otro IDE de gestion de base de datos. El elegido es dbeaver. Usaremos snap para instalarlo: 
 ```
 sudo snap install dbeaver-ce
 ```
 
 Para abrir nuestra base de datos importada, tendremos que realizar los siguientes pasos:
-1. New Database connection
-2. Indicar que se trata de una base de datos postgresql
-3. Los datos a rellenar son:
-- Host: localhost
-- Port: 5432
-- Database: postgres
+1. New Database connection/
 - Username: postgres
 - Password: la que se haya definido. Si seguimos los pasos del punto I, se puede usar "admin123"
 
