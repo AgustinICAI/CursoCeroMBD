@@ -7,7 +7,6 @@ La siguiente tabla muestra los directorios de mayor importancia en Linux
 | ---------- | ---------- |
 | /etc | Ficheros de configuración de la máquina. |
 | /etc/rc.d | Ficheros de configuración del arranque. |
-| /sbin | Ficheros esenciales del arranque, montaje del /usr y recuperación del sistema. |
 | /bin | Ejecutables del sistema |
 | /lib | Bibliotecas de los programas de /sbin y /bin. |
 | /usr | Ficheros compartibles por todo el sistema. Tiene un árbol de subdirectorios con una estructura similar al raíz. Suele montarse sólo para lectura. |
