@@ -93,6 +93,26 @@ where g.game_id = pgl2.game_id and pgl2.td3=1 and
 					group by player_id) as player_td3))
 group by equipo_sufridor					
 
+
+-- MISMA QUERY CON JOINS
+select p2.player_name, t1.nickname as casa ,t2.nickname as fuera, case WHEN pgl2.team_id = t1.team_id 
+																  then t2.nickname  
+														          else t1.nickname  end as equipo_sufridor
+from player_game_log pgl2 
+inner join game g on (g.game_id = pgl2.game_id)
+join team t1 on (g.team_id_home = t1.team_id)
+join team t2 on (g.team_id_away = t2.team_id)
+join player p2 on (p2.player_id = pgl2.player_id)
+where pgl2.td3=1  and 
+	pgl2.player_id = (
+	select p.player_id 
+	from player_game_log pgl, player p
+	where pgl.player_id = p.player_id 
+	group by p.player_id 
+	having sum(td3) = (select max(td3) from (
+					select player_id, sum(td3) as td3
+					from player_game_log pgl
+					group by player_id) as player_td3))
 					
 ```
 
