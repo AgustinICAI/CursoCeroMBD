@@ -145,4 +145,27 @@ where puntos_equipo_temporada_jugador.season_id = puntos_equipo_temporada.season
 ```
 
 - Obtener un listado de los jugadores que más puntos metieron en su año de DRAFT y el número de partidos que jugaron.
+```sql
+select player_name, puntos_draft_jugador.season_id, puntos_draft_jugador.suma
+from 
+(
+select  sum(pts) as suma, season_id, player_name 
+from player_game_log pgl
+join player p on (pgl.player_id = p.player_id)
+where p.draft_year = pgl.season_id::text 
+group by p.player_name, season_id
+order by 2 desc) puntos_draft_jugador
+,(
+select max(suma) as suma, season_id
+from (
+select  sum(pts) as suma, season_id 
+from player_game_log pgl
+join player p on (pgl.player_id = p.player_id)
+where p.draft_year = pgl.season_id::text 
+group by p.player_name, season_id
+order by 2 desc) puntos_draft
+group by season_id) puntos_draft
 
+where puntos_draft_jugador.season_id = puntos_draft.season_id
+and puntos_draft_jugador.suma = puntos_draft.suma
+```
