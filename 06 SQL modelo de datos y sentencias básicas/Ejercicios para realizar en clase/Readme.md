@@ -128,6 +128,20 @@ having sum(pts) > 0.3 * (select sum(pts) as pts_equipo
 							having pgl1.season_id = pgl2.season_id and pgl1.team_id = pgl2.team_id)	
 
 
+select p.player_name , puntos_equipo_temporada_jugador.*, puntos_equipo_temporada.*
+from 
+(select pgl2.player_id as player_id, pgl2.team_id as team_id, pgl2.season_id as season_id, sum(pts) as pts
+							from player_game_log pgl2
+							group by team_id, season_id,pgl2.player_id) puntos_equipo_temporada_jugador,
+(select pgl1.team_id as team_id , pgl1.season_id as season_id, sum(pts) as pts
+							from player_game_log pgl1
+							group by team_id, season_id) puntos_equipo_temporada, 
+player p
+where puntos_equipo_temporada_jugador.season_id = puntos_equipo_temporada.season_id and 
+      puntos_equipo_temporada_jugador.team_id = puntos_equipo_temporada.team_id and 
+      puntos_equipo_temporada_jugador.pts > 0.3* puntos_equipo_temporada.pts and 
+      puntos_equipo_temporada_jugador.player_id = p.player_id
+
 ```
 
 - Obtener un listado de los jugadores que más puntos metieron en su año de DRAFT y el número de partidos que jugaron.
