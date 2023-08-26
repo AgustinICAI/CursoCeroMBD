@@ -14,22 +14,13 @@ El overhead que introducen los hipervisor modernos está entre 9-12% de CPU.
 ## Aplicaciones
 - Virtualbox
 - Vmware
-- Hyper-V (sólo a partir de W8)
+- Hyper-V (opción Windows)
 
 ![alt text](https://raw.githubusercontent.com/AgustinICAI/CursoCeroMBD/master/images/virtualizacionArchitecture.png)
 
-## Máquinas virtuales de proceso
-Una máquina virtual de proceso, a veces llamada "máquina virtual de aplicación" o PVM (siglas del inglés Process-level Virtual Machine), se ejecuta como un proceso normal dentro de un sistema operativo sirviendo de enlace entre un lenguaje de programación y el sistema operativo, realizando una interpretación u otra técnica de enlace entre fuente y código máquina. La máquina se inicia automáticamente cuando se lanza el proceso que se desea ejecutar o manualmente para ejecutar código interactivamente y se detiene para cuando éste finaliza o se le pide terminar al entorno de ejecución. Su objetivo es el de proporcionar un entorno de ejecución independiente de la plataforma de hardware y del sistema operativo, que oculte los detalles de la plataforma subyacente y permita que un programa se ejecute siempre de la misma forma sobre cualquier plataforma.
 
-El ejemplo más conocido actualmente de este tipo de máquina virtual es la *máquina virtual de Java* que interpreta un código intermedio entre Java y código máquina. 
-
-Desarrollos realizados directamente sobre la máquina con lenguajes como c++ son un 10-50% más eficientes en cpu y memoria.
-
-## Contenedores
-La virtualización a nivel de sistema operativo es un método de virtualización de servidor en el cual el núcleo de un sistema operativo permite que existan múltiples instancias aisladas de espacios de usuario, en lugar de solo uno. Estos contenedores son totalmente independientes y aislados entre las distintas aplicaciones que corren.
-Motores principales para correr contenedores
-- Docker
-- Kubernetes
+## Otros tipos de virtualizaciones
+Existen virtualizaciones como máquina virtual de aplicación o la contenerización, que no se van a ver en este curso cero.
 
 
 # Para realizar en casa
@@ -40,7 +31,7 @@ Motores principales para correr contenedores
 https://www.virtualbox.org/wiki/Downloads
 
 ### 2. Descargar imagen Ubuntu
-https://ubuntu.com/download/desktop/thank-you?version=22.04&architecture=amd64
+https://ubuntu.com/download/desktop/thank-you?version=22.04.3&architecture=amd64
 - Se descargará una ISO que es la que hay que cargar en virtualbox
 
 - Here's what Canonical lists as the recommended minimum system requirements for installing the desktop edition of Ubuntu 20.04 Focal Fossa (source). Keep in mind that this pertains to physical installs. Virtualized installs can actually get by with less.
@@ -53,12 +44,6 @@ https://ubuntu.com/download/desktop/thank-you?version=22.04&architecture=amd64
 
 - Instalar en virtual Box
 - Activar la funcionalidad de copypaste y drag&drop. No todos los sistemas son compatibles con esta funcionalidad. También es recomendable configurar una shared folder.
-
-
-### Instalar usando snap: Pycharm, IntelliJ (según recomiende el fabricante).
-### Instalar visual studio code y Chrome usando el comando dpkg (descargar los ficheros .deb y lanzar el comando sudo dpkg -i ... )
-### Instalar GIT usando apt-get (siempre antes de instalar hay que hacer $ sudo apt-get update y posteriormente $ sudo apt-get install ... )
-
 
 
 
