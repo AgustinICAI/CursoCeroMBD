@@ -49,7 +49,8 @@ https://ubuntu.com/download/desktop/thank-you?version=22.04.3&architecture=amd64
 
 Esta forma sería la más nativa, ya que no hace falta instalar un programa de 3ros para realizar la virtualización. El propio sistema operativo Windows ya tiene instalado hyper-v que interacciona con el hipervisor de la máquina.
 
-![Instalación Ubuntu usando hyper-V de Windows PRO](https://wiki.ubuntu.com/Hyper-V)
+#### Instalación Ubuntu usando hyper-V de Windows PRO
+https://wiki.ubuntu.com/Hyper-V
 
 ## OPCION 3
 
