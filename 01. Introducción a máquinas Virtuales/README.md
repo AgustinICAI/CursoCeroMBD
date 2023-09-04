@@ -45,9 +45,14 @@ https://ubuntu.com/download/desktop/thank-you?version=22.04.3&architecture=amd64
 - Instalar en virtual Box
 - Activar la funcionalidad de copypaste y drag&drop. No todos los sistemas son compatibles con esta funcionalidad. También es recomendable configurar una shared folder.
 
+## OPCION 2 (Sólo para los que tengáis un WINDOWS y licencia PRO)
 
+Esta forma sería la más nativa, ya que no hace falta instalar un programa de 3ros para realizar la virtualización. El propio sistema operativo Windows ya tiene instalado hyper-v que interacciona con el hipervisor de la máquina.
 
-## OPCION 2
+#### Instalación Ubuntu usando hyper-V de Windows PRO
+https://wiki.ubuntu.com/Hyper-V
+
+## OPCION 3
 
 ### 1. Crear una partición en el disco (para no borrar el que ya tenemos, en windows se puede usar el gestor de particiones)
 ### 2. Instalar ubuntu en ella. Para ello será necesario crear un usb bootable con el ubuntu dentro.
