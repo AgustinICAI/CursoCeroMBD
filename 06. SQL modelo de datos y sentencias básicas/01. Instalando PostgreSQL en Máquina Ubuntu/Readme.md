@@ -2,6 +2,17 @@ Como apoyo la explicación de los distintos conceptos de SQL, vamos a instalar e
 
 Para ello será necesario instalar en nuestra máquina virtual un motor de base de datos postgresql como se indica en los siguientes pasos. Abrir el terminal (ventana negra) y ejecutar:
 ## Instalación
+- Ubuntu 22.04 no incluye por defecto el repositorio donde descargar postgre. Es por ello que es necesario añadirlo en un primer paso ejecutando los siguientes comandos:
+ 
+    ```
+    # Create the file repository configuration:
+    sudo sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+
+    # Import the repository signing key:
+    wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+
+    ```
+
 - En linux siempre es recomendable primero actualizar los repositorios de los paquetes, antes de instalar nada, así nos aseguraremos que siempre descargaremos las últimas versiones:
     ```
     $ sudo apt update
