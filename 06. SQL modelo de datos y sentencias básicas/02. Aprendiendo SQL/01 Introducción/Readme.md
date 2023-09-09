@@ -68,7 +68,7 @@ INSERT, UPDATE, DELETE).
 - DDL: (Data Definition Language)
     – Permiten definir nuevos objetos o destruirlos. (CREATE, DROP)
     – Añaden o borran información al catálogo.
-• DCL: (Data Control Language)
+- DCL: (Data Control Language)
     – Control de acceso a datos y seguridad. (GRANT, REVOKE)
 
 
