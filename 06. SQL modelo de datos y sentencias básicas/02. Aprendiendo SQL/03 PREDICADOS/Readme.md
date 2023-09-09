@@ -1,20 +1,20 @@
 # Tipos de Predicados
-• Un predicado expresa una condición entre valores, según sean estos, el resultado puede ser Verdadero, Falso o Desconocido.
-• Las condiciones de las SELECT se definen como predicados.
-• Se especifican en la clausula WHERE y otras…
-• Se clasifican en Predicados Simples y Compuestos.
+- Un predicado expresa una condición entre valores, según sean estos, el resultado puede ser Verdadero, Falso o Desconocido.
+- Las condiciones de las SELECT se definen como predicados.
+- Se especifican en la clausula WHERE y otras…
+- Se clasifican en Predicados Simples y Compuestos.
 
 ## Predicados básicos
-• Son Predicados Simples o de comparación.
-• Expresan condiciones de comparación entre dos valores.
-• Utilizando los signos: <, >, = y sus combinaciones.
-• Si alguno o ambos comparandos son NULL el predicado toma valor “Desconocido”.
-• El segundo comparando puede ser otra expresión o el resultado de otra sentencia SELECT (Select Subordinada).
+- Son Predicados Simples o de comparación.
+- Expresan condiciones de comparación entre dos valores.
+- Utilizando los signos: <, >, = y sus combinaciones.
+- Si alguno o ambos comparandos son NULL el predicado toma valor “Desconocido”.
+- El segundo comparando puede ser otra expresión o el resultado de otra sentencia SELECT (Select Subordinada).
 
 
 ## Predicado NULL
-• Permite saber si el valor de un atributo o expresión, en una fila determinada, es o no NULO.
-• Tomará valor Verdadero o Falso, pero nunca Desconocido.
+- Permite saber si el valor de un atributo o expresión, en una fila determinada, es o no NULO.
+- Tomará valor Verdadero o Falso, pero nunca Desconocido.
 
 ### Ejemplo
 Peliculas que no se han devuelto
@@ -24,7 +24,7 @@ select * from RENTAL WHERE RETURN_DATE IS NULL
 
 ## Predicado LIKE
 Sirve para buscar combinaciones de caracteres que cumplan ciertas condiciones.
-• Se usan caracteres comodines. Estos comodines son:
+- Se usan caracteres comodines. Estos comodines son:
     - '%': contiene cualquier carácter alfanumérico
     - '_': contiene 1 caracter
 
@@ -55,8 +55,8 @@ where language_id in (select language_id
 3) Obtener el numero de clientes que comparten código postal con el cliente con id '299'
 
 ## Predicados compuestos
-• Son combinaciones de otro predicados, simples o compuestos.
-• Usando los operadores AND, OR, NOT, para combinar los predicados.
+- Son combinaciones de otro predicados, simples o compuestos.
+- Usando los operadores AND, OR, NOT, para combinar los predicados.
 
 ## Ejemplos para preparar en casa
 
