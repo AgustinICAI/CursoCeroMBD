@@ -20,10 +20,31 @@ Para abrir nuestra base de datos importada, tendremos que realizar los siguiente
 - Hacer una select sobre las tablas de la base de datos para poder observar los campos y contenidos que tienen las tablas
 - Sacar toda la información sobre Kobe Bryant
 - Sacando el id_player, sacar todas las estadisticas de los partidos de Kobe Bryant
+```sql
+select count(*)
+from player_game_log pgl 
+where player_id = (SELECT player_id
+FROM player where player_name like 'Kobe Bryant')
+```
 
 - Sacar los paises que no sean EEUU que más han contribuido con jugadores ordenado de forma descendente.
+```sql
+select country, count(*)
+from player
+group by country 
+having country not like 'USA' and count(*) >= 10
+order by count(*) desc
+```
 
 - Obtener el jugador con mayor número de puntos en un partido
+```sql
+select *
+from player
+where player_id  = (select player_id 
+					from player_game_log 
+					where pts = (select max(pts)
+								 from player_game_log))
+```
 
 - Obtener el jugador con más partidos, sacando nombre jugador y puntos.
 
