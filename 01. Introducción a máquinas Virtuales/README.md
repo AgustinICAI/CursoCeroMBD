@@ -15,6 +15,7 @@ El overhead que introducen los hipervisor modernos está entre 9-12% de CPU.
 - Virtualbox
 - Vmware
 - Hyper-V (opción Windows)
+- WSL
 
 ![alt text](https://raw.githubusercontent.com/AgustinICAI/CursoCeroMBD/master/images/virtualizacionArchitecture.png)
 
@@ -23,37 +24,22 @@ El overhead que introducen los hipervisor modernos está entre 9-12% de CPU.
 Existen virtualizaciones como máquina virtual de aplicación o la contenerización, que no se van a ver en este curso cero.
 
 
-# Para realizar en casa
+# WINDOWS: Instalación máquina virtual a través de WSL
 
-## OPCION 1 (La que haremos en clase y se recomienda para el MBD por su facilidad de volver a recrearse)
+Windows Subsystem for Linux (WSL) es una característica de Windows que permite a los usuarios ejecutar un entorno Linux directamente en Windows, sin necesidad de máquinas virtuales o configuraciones dual-boot
 
-### 1. Instalar VirtualBox Windows y MAC
-https://www.virtualbox.org/wiki/Downloads
+[Documentación Oficial instalación Microsoft](https://learn.microsoft.com/en-us/windows/wsl/install)
 
-### 2. Descargar imagen Ubuntu
-https://ubuntu.com/download/desktop/thank-you?version=22.04.3&architecture=amd64
-- Se descargará una ISO que es la que hay que cargar en virtualbox
+### Prerequisitos
 
-- Here's what Canonical lists as the recommended minimum system requirements for installing the desktop edition of Ubuntu 20.04 Focal Fossa (source). Keep in mind that this pertains to physical installs. Virtualized installs can actually get by with less.
-    - 2 GHz dual core processor
-    - 4 GiB RAM (system memory)
-    - 25 GB of hard drive space (or USB stick, memory card or external drive but see LiveCD for an alternative approach)
-    - VGA capable of 1024x768 screen resolution
+You must be running Windows 10 version 2004 and higher (Build 19041 and higher) or Windows 11 to use the commands below. If you are on earlier versions please see the manual install page.
 
-* Puede darse el problema de que a nivel de bios no esté habilitada la opción de hypervisor. Si da un error al instalar será necesario activarlo en bios.
+### WSL 2.0 
 
-- Instalar en virtual Box
-- Activar la funcionalidad de copypaste y drag&drop. No todos los sistemas son compatibles con esta funcionalidad. También es recomendable configurar una shared folder.
+WSL aunque supone un mayor consumo de recursos corre a nivel de kernel, por lo que simula prácticamente una máquina virtual corriendo en linux.
 
-## OPCION 2 (Sólo para los que tengáis un WINDOWS y licencia PRO)
+# MACOS
 
-Esta forma sería la más nativa, ya que no hace falta instalar un programa de 3ros para realizar la virtualización. El propio sistema operativo Windows ya tiene instalado hyper-v que interacciona con el hipervisor de la máquina.
+ya disponéis del terminal de linux del propio MAC.
 
-#### Instalación Ubuntu usando hyper-V de Windows PRO
-https://wiki.ubuntu.com/Hyper-V
-
-## OPCION 3
-
-### 1. Crear una partición en el disco (para no borrar el que ya tenemos, en windows se puede usar el gestor de particiones)
-### 2. Instalar ubuntu en ella. Para ello será necesario crear un usb bootable con el ubuntu dentro.
 
