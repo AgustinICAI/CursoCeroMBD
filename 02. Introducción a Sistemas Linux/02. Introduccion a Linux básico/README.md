@@ -5,6 +5,8 @@ Se trata del corazón de Linux, se encarga de comunicar el hardware con las apli
 - Acceso a periféricos
 
 
+
+
 # Directorios principales de linux
 
 La siguiente tabla muestra los directorios de mayor importancia en Linux. 
