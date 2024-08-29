@@ -34,7 +34,17 @@ Windows Subsystem for Linux (WSL) es una característica de Windows que permite 
 
 You must be running Windows 10 version 2004 and higher (Build 19041 and higher) or Windows 11 to use the commands below. If you are on earlier versions please see the manual install page.
 
-### WSL 2.0 
+
+### Instalación
+```
+ wsl --install
+ wsl --install -d Ubuntu-24.04
+ wsl --setdefault Ubuntu-24.05
+ # Es recomendable borrar la de por defecto antigua de ubuntu
+ wsl --unregister Ubuntu
+```
+
+### fyi: WSL 2.0 
 
 WSL aunque supone un mayor consumo de recursos corre a nivel de kernel, por lo que simula prácticamente una máquina virtual corriendo en linux.
 
