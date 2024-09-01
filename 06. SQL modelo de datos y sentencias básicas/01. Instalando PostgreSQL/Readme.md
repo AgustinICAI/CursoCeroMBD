@@ -7,6 +7,21 @@ Como apoyo la explicación de los distintos conceptos de SQL, vamos a instalar e
 - Será necesario para trabajar instalar Postgre y PGAdmin (Postgre Admin) que se puede descargar e instalar del anterior enlace.
 - Para lanzar queries usaremos otro cliente de la comunidad que se llama DBeaver. [Dbeaver download](https://dbeaver.io/download/)
 
+- En windows (seguramente en MAC también aunque no lo he probado) la primera vez es necesario realizar el siguiente cambio para conectar:
+  ```
+  File: C:\Program Files\PostgreSQL\16\data\pg_hba.conf
+
+  Cambiar linea:
+  host    all             all             127.0.0.1/32            scram-sha-256
+
+  cambiar scram-sha-256 por trust
+  
+  host    all             all             127.0.0.1/32            trust
+
+  
+  ``` 
+
+
 ## Importar base de de datos
 Una vez instalado el motor y comprobado que corre correctamente, vamos a proceder a importar una base de datos de prueba. La explicación está apoyada en los tutoriales oficiales de postgresql (https://www.postgresqltutorial.com/postgresql-sample-database/). Para impottar la base de datos será necesario realizar lo siguiente:
 - Descargar la base de datos que vamos a utilizar: https://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip
