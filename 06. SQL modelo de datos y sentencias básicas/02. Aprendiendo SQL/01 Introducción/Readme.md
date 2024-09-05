@@ -1,7 +1,5 @@
 ## Conceptos básicos
 
-HOLA
-
 ### Tabla
 Es un conjunto de información que tiene relación entre sí
 
