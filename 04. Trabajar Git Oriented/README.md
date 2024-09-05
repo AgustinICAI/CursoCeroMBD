@@ -18,7 +18,6 @@ Git was created by Linus Torvalds in 2005 for development of the Linux kernel, w
 Host github.com
   User git
   IdentityFile ~/.ssh/id_ed25519
-
 ```
 
 ## Ejercicio 1
