@@ -49,3 +49,114 @@ Para abrir nuestra base de datos importada, tendremos que realizar los siguiente
 
 - Obtener un listado de los jugadores que más puntos metieron en su año de DRAFT y el número de partidos que jugaron.
 
+
+
+```sql
+select country, count(*), min(draft_number::INT) as min_draft
+from player
+where draft_number != 'Undrafted'
+group by country
+order by count(*) desc
+
+=====
+
+select player_name
+from player
+where player_id = (
+		select player_id
+		from player_game_log
+		where pts = (select max(pts)
+					from player_game_log))
+	
+========
+select player_name
+from player
+where player_id = (
+	select player_id
+	from player_game_log
+	group by player_id
+	having count(*) = (
+		select max(cuenta)
+		from(
+			select count(*) as cuenta
+			from player_game_log
+			group by player_id)))
+
+select player_id, count(*) as num_partidos
+from player_game_log 
+group by player_id 
+order by num_partidos desc
+
+======
+select player_name, pts
+from player, player_game_log
+where player.player_id = player_game_log.player_id 
+and pts > 70
+
+===============
+
+select p.player_name, pgl.pts
+from player p, player_game_log pgl 
+where p.player_id = pgl.player_id 
+and pts > 70
+
+=====
+
+select p.player_id, p.player_name, count(*), sum(pgl.pts)
+from player p, player_game_log pgl 
+where p.player_id = pgl.player_id 
+group by (p.player_id)
+order by count(*) desc
+
+/* QUEDARNOS SOLO CON EL JUGADOR QUE MÁS PUNTOS HA METIDO */
+
+select p.player_id, p.player_name, count(*), sum(pgl.pts)
+from player p, player_game_log pgl 
+where p.player_id = pgl.player_id 
+group by (p.player_id)
+having sum(pgl.pts) = (
+		select max(puntos)
+		from(
+		select sum(pgl.pts) as puntos
+		from player p, player_game_log pgl 
+		where p.player_id = pgl.player_id 
+		group by (p.player_id)))
+
+
+
+=====
+
+select p.player_id, p.player_name, count(*), sum(pgl.pts),
+sum(pgl.pts)/count(*) as promedio
+from player p, player_game_log pgl 
+where p.player_id = pgl.player_id 
+group by (p.player_id)
+order by promedio desc
+
+=====
+
+
+
+select CASE 
+        WHEN pgl1.team_id = g.team_id_home THEN taway.nickname 
+        ELSE thome.nickname
+    END
+from player_game_log pgl1, GAME g, team thome, team taway
+where pgl1.game_id = g.game_id and thome.team_id = g.team_id_home and
+      taway.team_id = g.team_id_away and td3 = 1 
+      and pgl1.player_id = 
+	(select p.player_id
+		from player p, player_game_log pgl 
+		where p.player_id = pgl.player_id and pgl.td3 = 1
+		group by p.player_id
+		having count(*) = (
+			select max(triples_dobles)
+				from(
+				select p.player_id, p.player_name, count(*) as triples_dobles
+				from player p, player_game_log pgl 
+				where p.player_id = pgl.player_id and pgl.td3 = 1
+				group by p.player_id 
+				order by triples_dobles desc)))
+
+
+```
