@@ -17,3 +17,6 @@ Este repositorio cubre:
 
 Disfruta de este curso 0!!! 
 
+## TEST DE AUTOEVALUACIÓN
+
+https://forms.gle/5UTDXz12EVnqbYw77
