@@ -42,15 +42,6 @@ Para abrir nuestra base de datos importada, tendremos que realizar los siguiente
 - Obtener el jugador con más partidos, sacando nombre jugador y puntos.
 
 - Obtener el jugador con más triples dobles y que equipos distintos le han sufrido (campo td3).
-
-
-- Obtener el nombre y temporada de los jugadores que en una temporada han metido más del 30% del todos los puntos de su equipo.
-
-
-- Obtener un listado de los jugadores que más puntos metieron en su año de DRAFT y el número de partidos que jugaron.
-
-
-
 ```sql
 select country, count(*), min(draft_number::INT) as min_draft
 from player
@@ -160,3 +151,33 @@ where pgl1.game_id = g.game_id and thome.team_id = g.team_id_home and
 
 
 ```
+
+- Obtener el nombre y temporada de los jugadores que en una temporada han metido más del 30% del todos los puntos de su equipo.
+```sql
+
+select t.nickname, p.player_name, pts_jugador.season_id, pts_jugador.suma, pts_equipo.suma
+from 
+player p,
+team t,
+(select team_id, season_id, player_id, sum(pts) as suma
+from player_game_log
+group by team_id, season_id, player_id) pts_jugador 
+,
+(select team_id, season_id, sum(pts) as suma
+from player_game_log
+group by team_id, season_id) pts_equipo
+where pts_jugador.team_id = pts_equipo.team_id and 
+	  pts_jugador.season_id = pts_equipo.season_id and 
+	  pts_jugador.suma > 0.3 * pts_equipo.suma and
+	  pts_jugador.team_id = t.team_id and
+	  pts_jugador.player_id = p.player_id 
+
+```
+
+- Obtener un listado de los jugadores que más puntos metieron en su año de DRAFT y el número de partidos que jugaron.
+
+```
+
+```
+
+
